@@ -327,11 +327,11 @@ MonoBehaviour:
     type: 3}
   offset: 1
   frequency: 20
-  magnitude: 2
+  magnitude: 10
   Number_of_Cubes: 1000
   Animation: 0
   In_Sync: 0
-  Vortex: 1
+  Vortex: 0
 --- !u!4 &1510184851
 Transform:
   m_ObjectHideFlags: 0

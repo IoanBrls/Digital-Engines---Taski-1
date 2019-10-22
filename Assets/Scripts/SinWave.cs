@@ -11,6 +11,7 @@ public class SinWave : MonoBehaviour
 	public int Number_of_Cubes;
 	public bool Animation;
 	public bool In_Sync;
+	[Range(0,10)]
 	public float Vortex;
 	
 	private GameObject[] cubes;
@@ -27,6 +28,7 @@ public class SinWave : MonoBehaviour
 		{
 			Vector3 offset3 = new Vector3(i * offset, 0, 0);
 			cubes[i] = Instantiate(Cube_prefab, transform.position + offset3, Quaternion.identity);
+			cubes[i].transform.SetParent(transform);
 		}
 			
     }
@@ -66,7 +68,7 @@ public class SinWave : MonoBehaviour
 			{
 				timer = 0;
 				cubes[count].GetComponent<SinCube>().animate = true;
-				cubes[count].GetComponent<SinCube>().vortex = (count + 1) * Vortex/10;
+				cubes[count].GetComponent<SinCube>().vortex = (count + 1) * Vortex/100;
 				cubes[count].GetComponent<SinCube>().magnitude = magnitude;
 				count++;
 			}
